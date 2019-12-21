@@ -4,4 +4,4 @@ services:
 before_install: 
  - travis_wait docker build -t pandiec/docker-react -f Dockerfile.dev .
 script:
- - docker run pandiec/docker-react npm run test -- --coverage
+ - travis_wait docker run pandiec/docker-react npm run test -- --coverage
