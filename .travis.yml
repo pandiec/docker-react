@@ -5,4 +5,4 @@ before_install:
  gem install bundler --pre
  - docker build -t pandiec/docker-react -f Dockerfile.dev .
 script:
- - travis_wait 60 docker run pandiec/docker-react npm run test -- --coverage
+ - docker run pandiec/docker-react npm run test -- --coverage
